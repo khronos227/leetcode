@@ -1,5 +1,7 @@
 package problem
 
+import lib.TreeNode
+
 class Q617 {
     fun mergeTrees(t1: TreeNode?, t2: TreeNode?): TreeNode? {
         if (t1 == null && t2 == null) {
@@ -10,9 +12,4 @@ class Q617 {
             this.right = mergeTrees(t1?.right, t2?.right)
         }
     }
-}
-
-class TreeNode(var `val`: Int = 0) {
-    var left: TreeNode? = null
-    var right: TreeNode? = null
 }

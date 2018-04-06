@@ -15,4 +15,4 @@ const uniqueMorseRepresentations = function(words) {
 }
 
 //====================
-console.log(uniqueMorseRepresentations(["gin", "zen", "gig", "msg"]) == 2)
+console.log(uniqueMorseRepresentations(["gin", "zen", "gig", "msg"]) === 2)

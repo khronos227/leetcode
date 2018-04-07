@@ -3,6 +3,7 @@
  * @param {string} S
  * @return {number[]}
  */
+
 const numberOfLines = function (widths, S) {
   const charCodeOfA = "a".charCodeAt(0)
   const units = Array.from(S).map((c => {
@@ -23,14 +24,10 @@ const numberOfLines = function (widths, S) {
 }
 
 //=========================
-const assertEq = function (actual, expected) {
-  return expected.every((num, index) => {
-    return num === actual[index]
-  })
-}
+const {assertEqualArray} = require("./lib/Assertion")
 
 console.log(
-  assertEq(
+  assertEqualArray(
     numberOfLines(
       [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10],
       "abcdefghijklmnopqrstuvwxyz"
@@ -40,7 +37,7 @@ console.log(
 )
 
 console.log(
-  assertEq(
+  assertEqualArray(
     numberOfLines(
       [4, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10],
       "bbbcccdddaaa"

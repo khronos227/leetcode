@@ -26,21 +26,18 @@ const numberOfLines = function (widths, S) {
 //=========================
 const {assertEqualArray} = require("./lib/Assertion")
 
-console.log(
-  assertEqualArray(
-    numberOfLines(
-      [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10],
-      "abcdefghijklmnopqrstuvwxyz"
-    ),
-    [3, 60]
-  )
+assertEqualArray(
+  numberOfLines(
+    [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10],
+    "abcdefghijklmnopqrstuvwxyz"
+  ),
+  [3, 60]
 )
 
-console.log(
-  assertEqualArray(
-    numberOfLines(
-      [4, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10],
-      "bbbcccdddaaa"
-    ),
-    [2, 4])
+assertEqualArray(
+  numberOfLines(
+    [4, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10],
+    "bbbcccdddaaa"
+  ),
+  [2, 4]
 )

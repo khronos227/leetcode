@@ -29,11 +29,11 @@ const rotateStringWithKMP = function (A, B) {
     T[right + 1] = right - left++
   }
   const I = 3
-  console.log(B.substring(0, T[I + 1]), B.substring(I - T[I + 1], I), T[I + 1])
+  // console.log(B.substring(0, T[I + 1]), B.substring(I - T[I + 1], I), T[I + 1])
 
   let matchLen = 0
   return Array.from(A + A).some(c => {
-    console.log(matchLen)
+    // console.log(matchLen)
     while (matchLen >= 0 && B.charAt(matchLen) !== c) {
       matchLen -= T[matchLen]
     }

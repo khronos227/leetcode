@@ -1,10 +1,20 @@
-module.exports = {
+const asserts = {
   assertTrue: function (actual) {
-    if (!actual) throw new Error("This must be true")
-    return true
+    try {
+      return asserts.assertEqual(actual, true)
+    } catch (_) {
+      throw new Error("This must be true")
+    }
   },
   assertFalse: function (actual) {
-    if (actual) throw new Error("This must be false")
+    try {
+      return asserts.assertEqual(actual, false)
+    } catch (_) {
+      throw new Error("This must be false")
+    }
+  },
+  assertEqual: function (actual, expected) {
+    if (actual !== expected) throw new Error(`"${actual}" must be expected value: "${expected}"`)
     return true
   },
   assertEqualArray: function (actual, expected) {
@@ -16,3 +26,5 @@ module.exports = {
     })
   }
 }
+
+module.exports = asserts

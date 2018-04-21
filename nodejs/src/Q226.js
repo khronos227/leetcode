@@ -37,7 +37,7 @@ class TreeNode {
   }
 
   toString() {
-    return `${this.val | 0}:[${this.left | ''},${this.right | ''}]`
+    return `${this.val || 0}:[${this.left ||''},${this.right || ''}]`
   }
 }
 
